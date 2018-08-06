@@ -43,4 +43,13 @@ public class TodoController {
         todo.setName(this.todo);
         todoRepository.save(todo);
     }
+
+    public String getOwner() {
+        String owner = System.getProperty("todo.owner");
+        logger.info("Todo owner: {}", owner);
+        if(owner == null || owner.isEmpty()) {
+            return "";
+        }
+        return owner+"'s";
+    }
 }

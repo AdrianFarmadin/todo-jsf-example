@@ -17,7 +17,7 @@
 
     <section class="todoapp">
         <header class="header">
-            <h1>todos</h1>
+            <h1><h:outputText value="#{todoController.owner}"/> todos</h1>
             <h:form>
                 <h:inputText class="new-todo" placeholder="What needs to be done?"  value="#{todoController.todo}" />
                 <h:commandButton class="submit-btn" action="#{todoController.save()}" value="Save" />

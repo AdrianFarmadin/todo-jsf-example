@@ -7,4 +7,4 @@ ENV DB_URL="jdbc:mysql://db:3306/todo"\
 ADD target/todo-wildfly-swarm-1.0.0-SNAPSHOT-thorntail.jar /opt/wildfly-swarm.jar
 
 EXPOSE 8080
-ENTRYPOINT java -jar /opt/wildfly-swarm.jar -Djava.net.preferIPv4Stack=true
+ENTRYPOINT ["java", "-jar", "/opt/wildfly-swarm.jar", "-Djava.net.preferIPv4Stack=true"]
