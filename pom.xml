@@ -9,10 +9,11 @@
     <packaging>war</packaging>
 
     <properties>
-        <version.thorntail>2.0.0.Final</version.thorntail>
+        <version.thorntail>2.1.0.Final</version.thorntail>
         <version.projectlombok>1.18.0</version.projectlombok>
         <version.deltaspike>1.8.2</version.deltaspike>
         <version.mysql>5.1.38</version.mysql>
+        <version.h2database>1.4.197</version.h2database>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -146,6 +147,14 @@
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-data-module-impl</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- TEST -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${version.h2database}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
